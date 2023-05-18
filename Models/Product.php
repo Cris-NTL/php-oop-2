@@ -11,4 +11,9 @@ class Product
     function __construct(public string $name, public float $price, public Category $category, public string $image)
     {
     }
+
+    function getDetails()
+    {
+        return "";
+    }
 }

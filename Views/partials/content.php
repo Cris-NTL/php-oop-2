@@ -10,6 +10,10 @@
                             <i class="<?php echo $product->category->icon; ?>"></i>
                             <p>Category: <?php echo $product->category->name ?></p>
                             <p>€ <?php echo $product->price ?></p>
+                            <p><?php echo $product->getDetails(); ?></p>
+                            <?php if (get_class($product) === "Food") { ?>
+                                <p><?php echo $product->getExpiration(); ?></p>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
