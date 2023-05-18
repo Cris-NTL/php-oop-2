@@ -1,19 +1,9 @@
 <?php
 
-require_once __DIR__ . "/Models/Category.php";
-require_once __DIR__ . "/Models/Product.php";
-require_once __DIR__ . "/Models/Food.php";
-require_once __DIR__ . "/Models/Toy.php";
+require __DIR__ . "/db.php";
 
-$dog_category = new Category("dog", "fa-solid fa-dog");
-var_dump($dog_category);
-$cat_category = new Category("cat", "fa-solid fa-cat");
-var_dump($cat_category);
+include __DIR__ . "/Views/layout/head.php";
 
-$my_cat = new Food("My Cat", 2, $cat_category, "", "2023-08-21");
-var_dump($my_cat);
-$my_dog = new Food("My Dog", 3, $dog_category, "", "2023-4-14");
-var_dump($my_dog);
+include __DIR__ . "/Views/partials/content.php";
 
-$duck = new Toy("Duck", "2.99", $dog_category, "", "wood", "duck");
-var_dump($duck);
+include __DIR__ . "/Views/layout/footer.php";
