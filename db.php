@@ -4,6 +4,7 @@ require_once __DIR__ . "/Models/Category.php";
 require_once __DIR__ . "/Models/Product.php";
 require_once __DIR__ . "/Models/Food.php";
 require_once __DIR__ . "/Models/Toy.php";
+require_once __DIR__ . "/Models/PetHouse.php";
 
 $dog_category = new Category("dog", "fa-solid fa-dog");
 // var_dump($dog_category);
@@ -21,10 +22,20 @@ $duck = new Toy("Duck", "2.99", $dog_category, "https://cdn.shopify.com/s/files/
 $mouse = new Toy("Mouse", "1.99", $cat_category, "https://5.imimg.com/data5/SELLER/Default/2021/2/LD/JE/UR/12304017/sticky-rat-toy-500x500.jpg", "Plastic", "Mouse-Toy");
 // var_dump($mouse);
 
+$dog_house = new PetHouse("Dog House", "49.90", $dog_category, "https://media.istockphoto.com/id/516461357/it/foto/carino-carlino-cane-in-the-dog-house.jpg?s=612x612&w=0&k=20&c=BOkkwx0Sri9LdEWa6vWvTYEJdeL9fuimCG5qkW2mnVg=", "Wood", "Pet-House");
+$dog_house1 = new PetHouse("Dog House", "39.99", $dog_category, "https://m.media-amazon.com/images/I/71NYH0alGAS.jpg", "Plastic", "Pet-House");
+
+$cat_house = new PetHouse("Cat House", "29.99", $cat_category, "https://secure.img1-cg.wfcdn.com/im/13845511/compr-r85/1516/151632373/outdoor-cat-house.jpg", "Plastic", "Pet-House");
+$cat_house1 = new PetHouse("Cat House", "69.99", $cat_category, "https://5.imimg.com/data5/SELLER/Default/2021/3/CJ/QH/BK/124991817/wooden-cat-house-small--1000x1000.jpg", "Wood", "Pet-House");
+
 $products =
     [
         $my_cat,
         $my_dog,
         $duck,
-        $mouse
+        $mouse,
+        $dog_house,
+        $cat_house,
+        $dog_house1,
+        $cat_house1,
     ];
