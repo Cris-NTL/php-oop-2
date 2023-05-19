@@ -1,8 +1,10 @@
 <?php
 
 require_once __DIR__ . "/Product.php";
+require_once __DIR__ . "/CheckExpiration.php";
 class Food extends Product
 {
+    use CheckExpiration;
     private $expiration;
     function __construct(String $_name, Float $_price, Category $_category, String $_image, String $_expiration)
     {
@@ -12,6 +14,10 @@ class Food extends Product
 
     public function getExpiration()
     {
-        return $this->expiration;
+        try {
+            return $this->checkExpiration();
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
     }
 }

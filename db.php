@@ -11,7 +11,7 @@ $dog_category = new Category("dog", "fa-solid fa-dog");
 $cat_category = new Category("cat", "fa-solid fa-cat");
 // var_dump($cat_category);
 
-$my_cat = new Food("My Cat", 2.50, $cat_category, "https://m.media-amazon.com/images/I/71Tvyq+SmUL.jpg", "2023-08-21");
+$my_cat = new Food("My Cat", 2.50, $cat_category, "https://m.media-amazon.com/images/I/71Tvyq+SmUL.jpg", "2021-05-21");
 // var_dump($my_cat);
 $my_dog = new Food("My Dog", 6.50, $dog_category, "https://happydog_it_sb.cstatic.io/440x440/f/69110/480x480/c90b13149a/hd-vet-new-product-slider-packshots-sensible-11kg-300g.png", "2023-4-14");
 // var_dump($my_dog);
